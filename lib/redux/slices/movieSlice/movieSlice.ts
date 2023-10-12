@@ -1,9 +1,13 @@
 import {createSlice} from '@reduxjs/toolkit'
 import {loadALlMovie} from "@/lib/redux/slices/movieSlice/thunks";
+import Movie from "@/lib/redux/slices/movieSlice/movie";
 
 
+export interface MovieSliceState {
+    movies: Movie[],
+}
 
-const initialState = {
+const initialState : MovieSliceState= {
     movies : []
 }
 
