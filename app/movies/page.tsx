@@ -3,10 +3,11 @@
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "@/lib/redux";
 import {loadALlMovie, selectMovie} from "@/lib/redux/slices/movieSlice";
+import Movie from "@/lib/redux/slices/movieSlice/movie";
 
 export default function Movie() {
     const dispatch = useDispatch()
-    const movies = useSelector(selectMovie);
+    const movies:Movie[] = useSelector(selectMovie);
 
     useEffect(() => {
         dispatch(loadALlMovie());
